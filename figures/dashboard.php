@@ -201,7 +201,7 @@ $itemStmt = $conn->prepare("
                                                 <button type="submit" name="action" value="cancel_order" class="btn btn-sm btn-light border" onclick="return confirm('Cancel this order?')">Cancel</button>
                                             </form>
                                         <?php elseif ($id === 'completed'): ?>
-                                            <a href="write_review.php?order_id=<?= $order['order_id'] ?>" class="btn-black btn-sm">Rate & Review</a>
+                                            <a href="write_review.php?order_id=<?= $order['order_id'] ?>" class="btn-black btn-sm" style="text-decoration: none;">Rate & Review</a>
                                             <a href="figures.php" class="btn btn-sm btn-outline-danger px-3">Shop More</a>
                                         <?php endif; ?>
                                     </div>
