@@ -1,0 +1,85 @@
+  /* --- LAYOUT FIXES --- */
+        .action-buttons-container {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 15px !important;
+            margin-top: 2rem !important;
+            width: 100% !important;
+        }
+
+        .btn-action {
+            flex: 1 !important;
+            padding: 15px 0 !important;
+            border-radius: 6px !important;
+            font-weight: 700 !important;
+            font-size: 16px !important;
+            text-decoration: none !important;
+            text-align: center !important;
+            border: none !important;
+            display: block !important;
+            transition: all 0.2s ease-in-out !important;
+        }
+
+        .btn-add-cart { background-color: #8b0000 !important; color: #fff !important; }
+        .btn-buy-now { background-color: #000 !important; color: #fff !important; }
+
+        .btn-action:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* --- AMAZING OPTION BUTTONS --- */
+        .option-btn {
+            border: 2px solid #dee2e6 !important;
+            background: #fff !important;
+            padding: 10px 20px !important;
+            font-weight: 600 !important;
+            color: #333 !important;
+            border-radius: 8px !important;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        }
+
+        .option-btn:hover {
+            border-color: #b30000 !important;
+            color: #b30000 !important;
+        }
+
+        .option-btn.active {
+            background-color: #b30000 !important;
+            border-color: #b30000 !important;
+            color: #fff !important;
+            transform: scale(1.08);
+            box-shadow: 0 4px 15px rgba(179, 0, 0, 0.4);
+        }
+
+        /* --- QUANTITY FIX --- */
+        .custom-qty-wrapper {
+            display: flex !important;
+            align-items: center !important;
+            border: 1px solid #dee2e6 !important;
+            border-radius: 0.375rem !important;
+            width: fit-content !important;
+            overflow: hidden !important;
+        }
+
+        .custom-qty-wrapper button {
+            border: none !important;
+            background: #f8f9fa !important;
+            padding: 8px 15px !important;
+            font-weight: bold;
+        }
+
+        .custom-qty-wrapper input {
+            width: 50px !important;
+            border: none !important;
+            text-align: center !important;
+            font-weight: bold !important;
+            background: #fff !important;
+        }
+
+        input[type="radio"]:checked + img.thumb {
+            border: 2px solid #b30000 !important;
+            transform: scale(1.1);
+        }
+
+        .thumb { transition: transform 0.2s ease; }

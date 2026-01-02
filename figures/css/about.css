@@ -1,0 +1,126 @@
+:root {
+    --text-red: #A30000;
+    --soft-gray: #f6f7f8;
+    --panel-bg: #ffffff;
+    --border-color: #e3e3e3;
+}
+
+/* BASE */
+body {
+    background-color: var(--soft-gray);
+    color: #2d2d2d;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.text-red { color: var(--text-red); }
+
+/* HERO */
+.hero-section {
+    padding: 120px 0;
+    background: linear-gradient(
+        to bottom,
+        #ffffff,
+        var(--soft-gray)
+    );
+}
+
+/* SECTION TYPES */
+.section-layered {
+    background-color: var(--soft-gray);
+}
+
+.section-soft {
+    background-color: #ffffff;
+}
+
+/* CONTENT PANEL */
+.content-panel {
+    background: var(--panel-bg);
+    border-radius: 18px;
+    padding: 60px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.05);
+}
+
+/* LABEL */
+.section-label {
+    color: var(--text-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* RED LINE */
+.red-line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--text-red);
+    margin-top: 14px;
+}
+
+/* QUOTE */
+.quote-box {
+    background: var(--soft-gray);
+    border-left: 4px solid var(--text-red);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* VALUES */
+.value-card {
+    background: var(--panel-bg);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+/* COLLECTION */
+.clean-card {
+    background: var(--panel-bg);
+    padding: 40px 30px;
+    border-radius: 14px;
+    text-align: center;
+    transition: all 0.35s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: var(--soft-gray);
+    color: var(--text-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+}
+
+/* MAP */
+.map-frame {
+    background: #fff;
+    border-radius: 14px;
+}
+
+/* REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .content-panel {
+        padding: 40px 25px;
+    }
+}

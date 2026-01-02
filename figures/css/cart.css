@@ -1,0 +1,89 @@
+ /* Dark Red Theme Variables */
+        :root {
+            --dark-red: #a30000;
+            --dark-red-hover: #800000;
+        }
+
+        /* High-Visibility Checkbox - Dark Red when checked */
+        .outline-checkbox {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            border: 2px solid #ced4da;
+            border-radius: 6px;
+            accent-color: var(--dark-red);
+        }
+
+        /* Improved Quantity Selector */
+        .qty-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background: #fff;
+            overflow: hidden;
+            width: fit-content;
+        }
+        .qty-btn {
+            background: #f8f9fa;
+            border: none;
+            padding: 8px 14px;
+            font-size: 1.2rem;
+            color: var(--dark-red); /* Dark red icons */
+            text-decoration: none !important;
+            transition: background 0.2s;
+        }
+        .qty-btn:hover {
+            background: #e9ecef;
+        }
+        .qty-input {
+            width: 45px;
+            text-align: center;
+            border: none;
+            font-weight: 700;
+            background: transparent;
+        }
+
+        /* Dark Red Checkout Button */
+        .btn-dark-red {
+            background-color: var(--dark-red);
+            border-color: var(--dark-red);
+            color: white;
+        }
+        .btn-dark-red:hover {
+            background-color: var(--dark-red-hover);
+            border-color: var(--dark-red-hover);
+            color: white;
+        }
+
+        .cart-item-row {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 576px) {
+            .product-info-col { width: 100%; }
+            .subtotal-display { font-size: 1.1rem !important; }
+            .qty-container { transform: scale(0.9); transform-origin: left; }
+            .cart-item-row .row { row-gap: 10px; }
+        }
+
+        .sticky-bottom-card {
+            position: sticky;
+            bottom: 0;
+            z-index: 1020;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .checkout-actions-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-delete:hover {
+            color: var(--dark-red);
+            transform: scale(1.1);
+        }

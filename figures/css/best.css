@@ -1,0 +1,177 @@
+/* =========================
+   GLOBAL & LAYOUT
+========================= */
+body, html { 
+    background-color: #ffffff !important; 
+    overflow-x: hidden; /* Kills the main horizontal scrollbar */
+}
+
+/* =========================
+   PRODUCT CARDS (Original Untouched)
+========================= */
+.product-card {
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    overflow: hidden;
+    height: 480px;
+    position: relative;
+    transition: transform 0.35s cubic-bezier(.34,1.56,.64,1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 26px 45px rgba(0,0,0,0.18);
+    border-color: #dcdcdc;
+    z-index: 10;
+}
+
+.img-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.45s cubic-bezier(.34,1.56,.64,1);
+}
+
+.product-card:hover .product-img { 
+    transform: scale(1.1); 
+}
+
+.card-body { 
+    padding: 1rem; 
+    display: flex; 
+    flex-direction: column; 
+    background: #fff; 
+}
+
+.product-title { 
+    font-size: 1.05rem; 
+    font-weight: 700; 
+    margin-bottom: 2px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.brand-text { 
+    font-size: 0.85rem; 
+    color: #6c757d; 
+    margin-bottom: 4px; 
+}
+
+.star-rating { 
+    font-size: 0.8rem; 
+    color: #ffc107; 
+}
+
+.price-text { 
+    font-size: 1.2rem; 
+    font-weight: 800; 
+}
+
+.view-details-text { 
+    font-size: 0.85rem; 
+    font-weight: 500; 
+    color: #333; 
+    transition: 0.3s; 
+}
+
+.product-card:hover .view-details-text { 
+    transform: translateX(10px); 
+    color: #8B0000; 
+}
+
+/* =========================
+   REVIEW SLIDER
+========================= */
+.review-slider { 
+    position: relative; 
+    overflow: hidden; /* Kills local horizontal scrollbar */
+    padding: 20px 0; 
+}
+
+.review-track { 
+    display: flex; 
+    gap: 20px; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.custom-review-card { 
+    border-radius: 15px; 
+    border: 1px solid #eee; 
+    background: #fff; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    flex-shrink: 0; 
+}
+
+.user-avatar-small { 
+    width: 45px; 
+    height: 45px; 
+    background: #8B0000; 
+    color: #fff; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold;
+}
+
+.review-control-btn {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    border: 1px solid #8B0000;
+    background: #fff; 
+    color: #8B0000; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    z-index: 10;
+}
+
+.review-control-btn:hover { 
+    background: #8B0000; 
+    color: #fff; 
+}
+
+ .rank-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            z-index: 12;
+            border: 2px solid #eee;
+        }
+        .rank-1 { border-color: #FFD700; color: #FFD700; } /* Gold */
+        .rank-2 { border-color: #C0C0C0; color: #C0C0C0; } /* Silver */
+        .rank-3 { border-color: #CD7F32; color: #CD7F32; } /* Bronze */
+        
+        .cat-pill {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }

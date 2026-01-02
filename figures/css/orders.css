@@ -1,0 +1,65 @@
+ :root {
+            --brand-red: #8B0000;
+            --brand-black: #000000;
+            --brand-white: #ffffff;
+        }
+
+        .order-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-custom {
+            border-radius: 4px;
+            padding: 8px 24px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-black {
+            background-color: var(--brand-black);
+            color: var(--brand-white) !important;
+        }
+        .btn-black:hover {
+            background-color: #333333;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-red {
+            background-color: var(--brand-red);
+            color: var(--brand-white) !important;
+        }
+        .btn-red:hover {
+            background-color: #a50000;
+            box-shadow: 0 4px 8px rgba(139,0,0,0.2);
+        }
+
+        /* --- STATUS BADGE --- */
+        .status-badge {
+            background-color: var(--brand-black);
+            color: var(--brand-white);
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 5px 15px;
+            border-radius: 4px; /* Matches card style better than pill */
+            text-transform: uppercase;
+        }
+
+        /* Item Price (Red) */
+        .text-price-item {
+            color: var(--brand-red);
+            font-weight: 700;
+        }
+
+        /* Total Price (Black) */
+        .text-price-total {
+            color: var(--brand-black);
+            font-weight: 900;
+        }

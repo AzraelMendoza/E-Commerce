@@ -1,0 +1,139 @@
+ :root {
+            --dark-red: #8B0000;
+            --off-white: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--off-white);
+            font-family: 'Inter', sans-serif;
+            color: #212529;
+        }
+
+        .review-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .review-header {
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--dark-red);
+        }
+
+        .review-card {
+            background: #fff;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #198754;
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .product-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        /* Star Rating Logic */
+        .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+
+        .stars input { display: none; }
+
+        .stars label {
+            font-size: 1.5rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .stars input:checked ~ label,
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: var(--dark-red);
+        }
+
+        .stars.readonly label {
+            cursor: default;
+        }
+
+        .stars.readonly input:checked ~ label {
+            color: #000; /* Already reviewed stars in black for contrast */
+        }
+
+        .btn-primary-custom {
+            background-color: var(--dark-red);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+            width: 100%;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #660000;
+            color: white;
+        }
+
+        .upload-area {
+            border: 2px dashed #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .upload-area:hover {
+            background: #fff5f5;
+            border-color: var(--dark-red);
+        }
+
+        .review-image-preview {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        textarea.form-control:focus {
+            border-color: var(--dark-red);
+            box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.1);
+        }
+
+        @media (max-width: 576px) {
+            .review-container { margin: 20px auto; }
+            .product-img { width: 60px; height: 60px; }
+            h2 { font-size: 1.1rem; }
+        }
