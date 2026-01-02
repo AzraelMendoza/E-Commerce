@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap');
+
+:root {
+    --accent-red: #8B0000;
+    --dark-text: #1a1a1a;
+    --light-bg: #ffffff;
+    --border-color: #e9ecef;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, .btn-cube {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Hero Section */
+.about-hero {
+    padding: 80px 0;
+    background: #f8f9fa;
+    border-bottom: 2px solid var(--dark-text);
+    text-align: center;
+}
+
+/* Interactive Product Cards */
+.pillar-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 40px 20px;
+    border-radius: 0; /* Sharp edges for a technical look */
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+}
+
+.pillar-card:hover {
+    border-color: var(--accent-red);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.pillar-card i {
+    font-size: 3rem;
+    color: var(--dark-text);
+    margin-bottom: 20px;
+}
+
+.pillar-card:hover i {
+    color: var(--accent-red);
+}
+
+/* Map Styling */
+.map-container {
+    border: 2px solid var(--dark-text);
+    box-shadow: 10px 10px 0px var(--accent-red);
+}
+
+.btn-cube {
+    background: var(--dark-text);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-cube:hover {
+    background: var(--accent-red);
+    color: white;
+}

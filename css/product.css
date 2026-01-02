@@ -1,0 +1,48 @@
+.badge-custom {
+            background-color: #9a1414ff;      /* red badge */
+            color: white;
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            z-index: 9999;
+        }
+
+        .position-relative {
+            overflow: visible;
+        }
+        .badge-custom {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* PRODUCT CARD HOVER EFFECT */
+.product-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* IMAGE SMOOTH ZOOM */
+.product-card .product-img {
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.12);
+}
+
+/* TITLE DARKEN ON HOVER */
+.product-card:hover .card-title {
+    color: #000;
+}
+
+/* "View details" underline on hover */
+.product-card:hover .text-muted-small:last-child {
+    text-decoration: underline;
+}

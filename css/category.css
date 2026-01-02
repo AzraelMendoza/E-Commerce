@@ -1,0 +1,101 @@
+.category-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4 / 5;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform .35s ease, box-shadow .35s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Individual backgrounds */
+.category-card.puzzle {
+  background-image: url('img/categories/puzzle2.png');
+}
+.category-card.figure {
+  background-image: url('img/categories/figure.png');
+}
+.category-card.rc {
+  background-image: url('img/categories/rctoys.png');
+}
+.category-card.board {
+  background-image: url('img/categories/boardgame.PNG');
+}
+
+/* Hover effects */
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Overlay */
+.category-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255,255,255,.8) 0%, rgba(255,255,255,0) 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+/* Title styling */
+.category-card h3 {
+  color: #222;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.category-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  height: 3px;
+  background: #b30000;
+  transform: translateX(-50%);
+  transition: width .3s ease, background .3s ease;
+}
+
+.category-card:hover h3 {
+  color: #000;
+}
+
+.category-card:hover h3::after {
+  width: 80%;
+  background: #ff1a1a;
+}
+
+/* Mobile: hide background image but keep card clickable and styled */
+@media (max-width: 576px) {
+  .category-card {
+    aspect-ratio: 1 / 1.1;
+    max-width: 90%;
+    background-image: none !important;
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+  }
+
+  .category-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .category-card .overlay {
+    background: none;
+    padding-bottom: 20px;
+  }
+}

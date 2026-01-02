@@ -1,0 +1,90 @@
+/* Color Palette: Dark Red (#8b0000), Black (#1a1a1a), White (#ffffff) */
+body {
+    background: #f8f9fa; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+h3 {
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.form-label {
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    border-color: #8b0000;
+    box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.15);
+}
+
+/* BUTTON FIX: High contrast hover state */
+.btn-red {
+    background: #8b0000; 
+    color: white !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+    background: #1a1a1a; /* Changes to Black on hover for a sleek look */
+    color: white !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.text-danger {
+    color: #8b0000 !important;
+}
+
+/* EYE ICON ALIGNMENT FIX */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    /* This centers the icon vertically within the input box only */
+    top: 50%;
+    transform: translateY(-50%); 
+    font-size: 1.2rem;
+    color: #8b0000; 
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    line-height: 1;
+}
+
+.form-check-input:checked {
+    background-color: #8b0000;
+    border-color: #8b0000;
+}

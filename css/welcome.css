@@ -1,0 +1,118 @@
+#hero {
+    position: relative;
+    height: 80vh; /* Default height for desktop */
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero-slider {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents image stretching */
+    flex-shrink: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    color: #fff;
+    pointer-events: auto;
+    width: 100%;
+}
+
+/* Responsive Text Scaling */
+.hero-content h1 {
+    font-size: clamp(1.8rem, 6vw, 4rem);
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: 1.5rem;
+}
+
+#shop-button {
+    padding: clamp(8px, 2vw, 12px) clamp(20px, 4vw, 35px);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    pointer-events: auto;
+}
+
+.hero-nav {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.nav-dot {
+    width: clamp(10px, 2vw, 14px);
+    height: clamp(10px, 2vw, 14px);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    pointer-events: auto;
+}
+
+.nav-dot.active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #hero {
+        height: 60vh; /* Shorter for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        height: 50vh; /* Best for mobile phones */
+    }
+    .hero-nav {
+        bottom: 15px;
+    }
+}
+
+#newAr {
+    padding-top: 120px;
+}
+
