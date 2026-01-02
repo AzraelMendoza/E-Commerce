@@ -1,0 +1,51 @@
+₱<?php echo htmlspecialchars($product['price']);?>
+
+<?php echo htmlspecialchars($product['name']); ?>
+
+ <?php echo nl2br(htmlspecialchars($product['description'])); ?>
+
+<script src="js/prod.js?v=<?php echo time(); ?>"></script>
+<script src="js/buy.js?v=<?php echo time(); ?>"></script>
+
+
+ 			<div class="mt-4">
+                            <label class="fw-bold mb-2">Quantity</label>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="custom-qty-wrapper">
+                                        <button id="minus" type="button">-</button>
+                                        <input type="number" id="qty" value="1" min="1"> 
+                                        <button id="plus" type="button">+</button>
+                                </div>
+                                <span class="text-muted">Stock: <strong id="stockCount"><?php echo $initialStock; ?></strong></span>
+                            </div>
+                    </div>
+
+
+
+<div class="action-buttons mt-4">
+    <button type="button" 
+            class="btn-action btn-add" 
+            <?php echo ($initialStock <= 0) ? 'disabled style="background: gray; cursor: not-allowed;"' : ''; ?>>
+        Add to Cart
+    </button>
+    
+    <button type="button" 
+            class="btn-action btn-buy" 
+            onclick="handleAction('buy')"
+            <?php echo ($initialStock <= 0) ? 'disabled style="background: #ccc; cursor: not-allowed;"' : ''; ?>>
+        Buy Now
+    </button>
+</div>
+
+
+<div class="p-3 bg-light border rounded mt-4 mb-4">
+                            <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-shield-check" style="font-size: 1.2rem; color:#b30000;"></i>
+                                    <span class="fw-bold">Shopping Guarantee</span>
+                            </div>
+                            <p class="text-muted small mb-0 ms-4">Free & Easy Returns · Merchandise Protection</p>
+                    </div>
+
+
+
+
